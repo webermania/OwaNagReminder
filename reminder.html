@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outlook Reminder</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+      animation: pulse-bg 2s infinite;
+    }
+
+    @keyframes pulse-bg {
+      0% { background-color: #1a1a1a; }
+      50% { background-color: #2d1a1a; } /* Subtle red pulse */
+      100% { background-color: #1a1a1a; }
+    }
+
+    .icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+      animation: shake 0.5s infinite;
+    }
+
+    @keyframes shake {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-10deg); }
+      75% { transform: rotate(10deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 0 0 10px 0;
+      color: #ff6b6b;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin: 0 0 15px 0;
+      font-weight: normal;
+      color: #e0e0e0;
+    }
+
+    p {
+      font-size: 14px;
+      color: #aaaaaa;
+      margin-bottom: 25px;
+    }
+
+    button {
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.1s, background 0.2s;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    }
+
+    button:hover {
+      background: #ff5252;
+      transform: scale(1.05);
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">🔔</div>
+    <h1 id="time-warning">Meeting Alert!</h1>
+    <h2 id="subject">Loading...</h2>
+    <p id="time-details">...</p>
+    <button id="dismiss-btn">Dismiss</button>
+  </div>
+  <script src="reminder.js"></script>
+</body>
+</html>

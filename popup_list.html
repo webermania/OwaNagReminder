@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Reminders</title>
+    <style>
+        body {
+            width: 320px;
+            min-height: 200px;
+            margin: 0;
+            padding: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        h1 {
+            font-size: 18px;
+            margin: 0 0 15px 0;
+            color: #d32f2f;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .refresh-hint {
+            font-size: 10px;
+            color: #888;
+            font-weight: normal;
+        }
+
+        #reminders-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .reminder-item {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-left: 4px solid #d32f2f;
+            transition: background 0.2s;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .reminder-item:hover {
+            background: #eeeeee;
+        }
+
+        .reminder-subject {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #000;
+        }
+
+        .reminder-time {
+            font-size: 12px;
+            color: #666666;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #888;
+            font-style: italic;
+            margin-top: 30px;
+        }
+
+        .time-badge {
+            display: inline-block;
+            background: rgba(211, 47, 47, 0.1);
+            color: #d32f2f;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            margin-right: 5px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Upcoming Events
+        <span class="refresh-hint">
+            Last sync: <span id="last-updated">--</span>
+        </span>
+    </h1>
+    <ul id="reminders-list">
+        <!-- Items will be injected here -->
+    </ul>
+    <script src="popup_list.js"></script>
+</body>
+
+</html>
