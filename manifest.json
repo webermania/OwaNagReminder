@@ -1,6 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Outlook Naggy Reminders",
+  "description": "Persistent, unignorable popup reminders for Outlook Web. Never miss a meeting again.",
   "version": "0.1",
   "permissions": [
     "notifications",
